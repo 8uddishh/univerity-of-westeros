@@ -13,7 +13,8 @@
                 .HasMaxLength(200)
                 .HasColumnType("varchar(200)")
                 .IsRequired(true);
-            builder.Property(ct => ct.Name)
+
+            builder.Property(ct => ct.Descriptiom)
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);

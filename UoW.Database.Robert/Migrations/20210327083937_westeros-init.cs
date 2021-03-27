@@ -12,8 +12,8 @@ namespace UoW.Database.Robert.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    Description = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,8 +26,8 @@ namespace UoW.Database.Robert.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: true),
-                    Descriptiom = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    Descriptiom = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: true)
                 },
                 constraints: table =>
                 {
