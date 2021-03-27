@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UoW.Database.Robert;
 
 namespace UoW.Database.Robert.Migrations
 {
     [DbContext(typeof(WesterosContext))]
-    partial class WesterosContextModelSnapshot : ModelSnapshot
+    [Migration("20210327181719_westeros-onboard-facultytype")]
+    partial class westerosonboardfacultytype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,25 +37,6 @@ namespace UoW.Database.Robert.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Batches");
-                });
-
-            modelBuilder.Entity("UoW.Database.Robert.Entities.BookStatusType", b =>
-                {
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("varchar(400)")
-                        .HasMaxLength(400);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BookStatusTypes");
                 });
 
             modelBuilder.Entity("UoW.Database.Robert.Entities.ContactType", b =>

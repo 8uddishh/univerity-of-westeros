@@ -12,6 +12,8 @@
         public DbSet<ContactType> ContactTypes { get; set; }
         public DbSet<Semester> Semesters { get; set; }
         public DbSet<Batch> Batches { get; set; }
+        public DbSet<FacultyType> FacultyTypes { get; set; }
+        public DbSet<BookStatusType> BookStatusTypes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -19,6 +21,8 @@
             modelBuilder.Entity<ContactType>(b => b.Configure());
             modelBuilder.Entity<Semester>(b => b.Configure());
             modelBuilder.Entity<Batch>(b => b.Configure());
+            modelBuilder.Entity<FacultyType>(b => b.Configure());
+            modelBuilder.Entity<BookStatusType>(b => b.Configure());
         }
     }
 }
