@@ -5,3 +5,7 @@
 /.vs/UoW.Database.Robert
 /UoW.Database.Robert/bin/Debug/netcoreapp3.1
 /UoW.Database.Robert/obj
+/.vs/UoW.All
+/UoW.Database.Robert/bin/Release/netcoreapp3.1
+/UoW.Global.Rivers/bin
+/UoW.Global.Rivers/obj
