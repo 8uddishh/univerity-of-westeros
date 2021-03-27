@@ -14,7 +14,7 @@
                 .HasColumnType("varchar(200)")
                 .IsRequired(true);
 
-            builder.Property(ct => ct.Descriptiom)
+            builder.Property(ct => ct.Description)
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);

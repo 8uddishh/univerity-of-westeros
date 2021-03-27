@@ -11,11 +11,14 @@
 
         public DbSet<ContactType> ContactTypes { get; set; }
         public DbSet<Semester> Semesters { get; set; }
+        public DbSet<Batch> Batches { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ContactType>(b => b.Configure());
             modelBuilder.Entity<Semester>(b => b.Configure());
+            modelBuilder.Entity<Batch>(b => b.Configure());
         }
     }
 }
