@@ -2,10 +2,14 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/UoW.Database.Robert
-/UoW.Database.Robert/bin/Debug/netcoreapp3.1
+/.vs
+/UoW.Database.Robert/bin
 /UoW.Database.Robert/obj
-/.vs/UoW.All
-/UoW.Database.Robert/bin/Release/netcoreapp3.1
 /UoW.Global.Rivers/bin
 /UoW.Global.Rivers/obj
+/UoW.Students.Sand/bin
+/UoW.Students.Sand/obj
+/UoW.Faculties.Flowers/bin
+/UoW.Faculties.Flowers/obj
+/UoW.Books.Snow/bin
+/UoW.Books.Snow/obj

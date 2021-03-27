@@ -9,7 +9,7 @@ namespace UoW.Database.Robert.Migrations
             migrationBuilder.InsertData(
                 table: "FacultyTypes",
                 columns: new[] { "Name", "Description" },
-                values: new object[] { "Dean", "Head of Department" }
+                values: new object[] { "Dean", "Dean of College" }
             );
 
             migrationBuilder.InsertData(

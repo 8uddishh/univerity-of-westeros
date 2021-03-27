@@ -14,6 +14,7 @@
         public DbSet<Batch> Batches { get; set; }
         public DbSet<FacultyType> FacultyTypes { get; set; }
         public DbSet<BookStatusType> BookStatusTypes { get; set; }
+        public DbSet<StudentStatusType> StudentStatusTypes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -23,6 +24,7 @@
             modelBuilder.Entity<Batch>(b => b.Configure());
             modelBuilder.Entity<FacultyType>(b => b.Configure());
             modelBuilder.Entity<BookStatusType>(b => b.Configure());
+            modelBuilder.Entity<StudentStatusType>(b => b.Configure());
         }
     }
 }
