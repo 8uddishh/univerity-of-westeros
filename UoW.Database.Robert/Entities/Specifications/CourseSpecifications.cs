@@ -11,12 +11,12 @@
             builder.Property(c => c.Id).ValueGeneratedOnAdd();
 
             builder.Property(c => c.Code)
-                .HasMaxLength(200)
+                .HasMaxLength(50)
                 .HasColumnType("varchar(50)")
                 .IsRequired(true);
 
             builder.Property(c => c.Title)
-                .HasMaxLength(400)
+                .HasMaxLength(200)
                 .HasColumnType("varchar(200)")
                 .IsRequired(true);
 

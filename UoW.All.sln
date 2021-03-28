@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Database.Robert", "UoW.Database.Robert\UoW.Database.Robert.csproj", "{9186C634-13D9-459B-AD81-35E2773657D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{DAD26E50-5610-497D-9322-4FC547E30788}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{DAD26E50-5610-497D-9322-4FC547E30788}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{4E143332-6772-4E57-8DC5-5BA036509C7C}"
 EndProject

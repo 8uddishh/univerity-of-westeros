@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UoW.Database.Robert;
 
 namespace UoW.Database.Robert.Migrations
 {
     [DbContext(typeof(WesterosContext))]
-    partial class WesterosContextModelSnapshot : ModelSnapshot
+    [Migration("20210328210858_westeros-onboard-books")]
+    partial class westerosonboardbooks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -732,7 +734,7 @@ namespace UoW.Database.Robert.Migrations
 
                     b.ToTable("Students");
 
-                    b.HasCheckConstraint("CK_Student_Gender", "[Gender] = 'M' OR [Gender] = 'F' OR [Gender] = 'I'");
+                    b.HasCheckConstraint("CK_Author_Gender", "[Gender] = 'M' OR [Gender] = 'F' OR [Gender] = 'I'");
                 });
 
             modelBuilder.Entity("UoW.Database.Robert.Entities.StudentStatusType", b =>
