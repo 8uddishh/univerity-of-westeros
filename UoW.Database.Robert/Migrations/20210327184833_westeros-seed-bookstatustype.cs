@@ -28,7 +28,7 @@ namespace UoW.Database.Robert.Migrations
             migrationBuilder.InsertData(
                 table: "BookStatusTypes",
                 columns: new[] { "Id", "Name", "Description" },
-                values: new object[] { (int)(BookStatusType.Used | BookStatusType.Available), "Used and Borrowed", "New and Available" }
+                values: new object[] { (int)(BookStatusType.Used | BookStatusType.Available), "Used and Available", "Used and Available" }
             );
 
             migrationBuilder.InsertData(
@@ -58,13 +58,13 @@ namespace UoW.Database.Robert.Migrations
             migrationBuilder.InsertData(
                 table: "BookStatusTypes",
                 columns: new[] { "Id", "Name", "Description" },
-                values: new object[] { (int)(BookStatusType.New | BookStatusType.Damaged), "New and Lost", "New and Damaged" }
+                values: new object[] { (int)(BookStatusType.New | BookStatusType.Damaged), "New and Damaged", "New and Damaged" }
             );
 
             migrationBuilder.InsertData(
                 table: "BookStatusTypes",
                 columns: new[] { "Id", "Name", "Description" },
-                values: new object[] { (int)(BookStatusType.Used | BookStatusType.Damaged), "Used and Lost", "New and Damaged" }
+                values: new object[] { (int)(BookStatusType.Used | BookStatusType.Damaged), "Used and Damaged", "New and Damaged" }
             );
         }
 

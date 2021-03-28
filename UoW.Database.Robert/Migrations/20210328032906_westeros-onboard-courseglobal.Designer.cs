@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UoW.Database.Robert;
 
 namespace UoW.Database.Robert.Migrations
 {
     [DbContext(typeof(WesterosContext))]
-    partial class WesterosContextModelSnapshot : ModelSnapshot
+    [Migration("20210328032906_westeros-onboard-courseglobal")]
+    partial class westerosonboardcourseglobal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,9 +36,6 @@ namespace UoW.Database.Robert.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EndYear")
-                        .IsUnique();
-
                     b.ToTable("Batches");
                 });
 
@@ -55,9 +54,6 @@ namespace UoW.Database.Robert.Migrations
                         .HasMaxLength(200);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("BookStatusTypes");
                 });
@@ -80,9 +76,6 @@ namespace UoW.Database.Robert.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("ContactTypes");
                 });
 
@@ -103,9 +96,6 @@ namespace UoW.Database.Robert.Migrations
                         .HasMaxLength(200);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("CourseActivityTypes");
                 });
@@ -128,9 +118,6 @@ namespace UoW.Database.Robert.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("CourseCategoryTypes");
                 });
 
@@ -151,9 +138,6 @@ namespace UoW.Database.Robert.Migrations
                         .HasMaxLength(200);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("CourseModuleTypes");
                 });
@@ -176,9 +160,6 @@ namespace UoW.Database.Robert.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("FacultyTypes");
                 });
 
@@ -200,9 +181,6 @@ namespace UoW.Database.Robert.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("Semesters");
                 });
 
@@ -221,9 +199,6 @@ namespace UoW.Database.Robert.Migrations
                         .HasMaxLength(200);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("StudentStatusTypes");
                 });

@@ -15,6 +15,9 @@
         public DbSet<FacultyType> FacultyTypes { get; set; }
         public DbSet<BookStatusType> BookStatusTypes { get; set; }
         public DbSet<StudentStatusType> StudentStatusTypes { get; set; }
+        public DbSet<CourseCategoryType> CourseCategoryTypes { get; set; }
+        public DbSet<CourseActivityType> CourseActivityTypes { get; set; }
+        public DbSet<CourseModuleType> CourseModuleTypes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +28,9 @@
             modelBuilder.Entity<FacultyType>(b => b.Configure());
             modelBuilder.Entity<BookStatusType>(b => b.Configure());
             modelBuilder.Entity<StudentStatusType>(b => b.Configure());
+            modelBuilder.Entity<CourseCategoryType>(b => b.Configure());
+            modelBuilder.Entity<CourseActivityType>(b => b.Configure());
+            modelBuilder.Entity<CourseModuleType>(b => b.Configure());
         }
     }
 }

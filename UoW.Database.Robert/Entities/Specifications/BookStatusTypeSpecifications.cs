@@ -20,6 +20,8 @@
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);
+
+            builder.HasIndex(bst => bst.Name).IsUnique();
         }
     }
 }

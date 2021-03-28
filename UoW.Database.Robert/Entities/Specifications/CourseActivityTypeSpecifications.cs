@@ -3,23 +3,24 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    public static class SemesterSpecifications
+    public static class CourseActivityTypeSpecifications
     {
-        public static void Configure(this EntityTypeBuilder<Semester> builder)
+        public static void Configure(this EntityTypeBuilder<CourseActivityType> builder)
         {
-            builder.HasKey(ct => ct.Id);
-            builder.Property(ct => ct.Id).ValueGeneratedOnAdd();
-            builder.Property(ct => ct.Name)
+            builder.HasKey(cat => cat.Id);
+            builder.Property(cat => cat.Id).ValueGeneratedOnAdd();
+
+            builder.Property(cat => cat.Name)
                 .HasMaxLength(200)
                 .HasColumnType("varchar(200)")
                 .IsRequired(true);
 
-            builder.Property(ct => ct.Description)
+            builder.Property(cat => cat.Description)
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);
 
-            builder.HasIndex(ct => ct.Name).IsUnique();
+            builder.HasIndex(cat => cat.Name).IsUnique();
         }
     }
 }

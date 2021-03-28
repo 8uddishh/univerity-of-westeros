@@ -19,6 +19,8 @@
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);
+
+            builder.HasIndex(ft => ft.Name).IsUnique();
         }
     }
 }

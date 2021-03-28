@@ -12,12 +12,12 @@ services:
     ports:
       - "15789:1433"
     volumes:
-      - sqlsystem:/var/opt/mssql
-      - sqldata:/var/opt/sqlserver/data
-      - sqllog:/var/opt/sqlserver/log
-      - sqlbackup:/var/opt/sqlserver/backup
+      - sql-system:/var/opt/mssql
+      - sql-data:/var/opt/sqlserver/data
+      - sql-log:/var/opt/sqlserver/log
+      - sql-backup:/var/opt/sqlserver/backup
 volumes:
-  sqlsystem:
-  sqldata:
-  sqllog:
-  sqlbackup:
+  sql-system:
+  sql-data:
+  sql-log:
+  sql-backup:

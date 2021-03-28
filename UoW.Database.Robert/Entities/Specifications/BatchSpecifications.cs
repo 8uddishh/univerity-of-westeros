@@ -18,6 +18,8 @@
                 .HasMaxLength(400)
                 .HasColumnType("varchar(400)")
                 .IsRequired(false);
+
+            builder.HasIndex(bt => bt.EndYear).IsUnique();
         }
     }
 }
