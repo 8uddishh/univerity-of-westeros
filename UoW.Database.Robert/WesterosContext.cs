@@ -18,6 +18,7 @@
         public DbSet<CourseCategoryType> CourseCategoryTypes { get; set; }
         public DbSet<CourseActivityType> CourseActivityTypes { get; set; }
         public DbSet<CourseModuleType> CourseModuleTypes { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,6 +32,7 @@
             modelBuilder.Entity<CourseCategoryType>(b => b.Configure());
             modelBuilder.Entity<CourseActivityType>(b => b.Configure());
             modelBuilder.Entity<CourseModuleType>(b => b.Configure());
+            modelBuilder.Entity<Course>(b => b.Configure());
         }
     }
 }
