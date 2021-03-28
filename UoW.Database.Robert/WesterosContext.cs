@@ -19,6 +19,8 @@
         public DbSet<CourseActivityType> CourseActivityTypes { get; set; }
         public DbSet<CourseModuleType> CourseModuleTypes { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<CourseSyllabus> CourseSyllabi { get; set; }
+        public DbSet<CourseSyllabusActivity> CourseActivities { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,6 +35,8 @@
             modelBuilder.Entity<CourseActivityType>(b => b.Configure());
             modelBuilder.Entity<CourseModuleType>(b => b.Configure());
             modelBuilder.Entity<Course>(b => b.Configure());
+            modelBuilder.Entity<CourseSyllabus>(b => b.Configure());
+            modelBuilder.Entity<CourseSyllabusActivity>(b => b.Configure());
         }
     }
 }

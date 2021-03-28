@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UoW.Database.Robert;
 
 namespace UoW.Database.Robert.Migrations
 {
     [DbContext(typeof(WesterosContext))]
-    partial class WesterosContextModelSnapshot : ModelSnapshot
+    [Migration("20210328061407_westeros-onboard-syllabus-activity")]
+    partial class westerosonboardsyllabusactivity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,6 +118,41 @@ namespace UoW.Database.Robert.Migrations
                     b.ToTable("Courses");
                 });
 
+            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseActivity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CourseActivityTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseSyllabusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("varchar(600)")
+                        .HasMaxLength(400);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseActivityTypeId");
+
+                    b.HasIndex("CourseSyllabusId");
+
+                    b.HasIndex("Title", "CourseActivityTypeId", "CourseSyllabusId")
+                        .IsUnique();
+
+                    b.ToTable("CourseActivities");
+                });
+
             modelBuilder.Entity("UoW.Database.Robert.Entities.CourseActivityType", b =>
                 {
                     b.Property<int>("Id")
@@ -218,41 +255,6 @@ namespace UoW.Database.Robert.Migrations
                     b.ToTable("CourseSyllabi");
                 });
 
-            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseSyllabusActivity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CourseActivityTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseSyllabusId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("varchar(600)")
-                        .HasMaxLength(400);
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseActivityTypeId");
-
-                    b.HasIndex("CourseSyllabusId");
-
-                    b.HasIndex("Title", "CourseActivityTypeId", "CourseSyllabusId")
-                        .IsUnique();
-
-                    b.ToTable("CourseSyllabusActivities");
-                });
-
             modelBuilder.Entity("UoW.Database.Robert.Entities.FacultyType", b =>
                 {
                     b.Property<int>("Id")
@@ -332,16 +334,7 @@ namespace UoW.Database.Robert.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseSyllabus", b =>
-                {
-                    b.HasOne("UoW.Database.Robert.Entities.Course", "Course")
-                        .WithMany("CourseSyllabi")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseSyllabusActivity", b =>
+            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseActivity", b =>
                 {
                     b.HasOne("UoW.Database.Robert.Entities.CourseActivityType", "CourseActivityType")
                         .WithMany("CourseActivities")
@@ -352,6 +345,15 @@ namespace UoW.Database.Robert.Migrations
                     b.HasOne("UoW.Database.Robert.Entities.CourseSyllabus", "CourseSyllabus")
                         .WithMany("CourseActivities")
                         .HasForeignKey("CourseSyllabusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("UoW.Database.Robert.Entities.CourseSyllabus", b =>
+                {
+                    b.HasOne("UoW.Database.Robert.Entities.Course", "Course")
+                        .WithMany("Syllabi")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

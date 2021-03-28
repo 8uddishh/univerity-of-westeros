@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace UoW.Database.Robert.Entities
+﻿namespace UoW.Database.Robert.Entities
 {
+    using System.Collections.Generic;
+
     public class CourseCategoryType
     {
         public int Id { get; set; }

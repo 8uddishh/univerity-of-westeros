@@ -7,25 +7,25 @@
     {
         public static void Configure(this EntityTypeBuilder<Course> builder)
         {
-            builder.HasKey(ct => ct.Id);
-            builder.Property(ct => ct.Id).ValueGeneratedOnAdd();
+            builder.HasKey(c => c.Id);
+            builder.Property(c => c.Id).ValueGeneratedOnAdd();
 
-            builder.Property(ct => ct.Code)
+            builder.Property(c => c.Code)
                 .HasMaxLength(200)
                 .HasColumnType("varchar(50)")
                 .IsRequired(true);
 
-            builder.Property(ct => ct.Title)
+            builder.Property(c => c.Title)
                 .HasMaxLength(400)
                 .HasColumnType("varchar(200)")
                 .IsRequired(true);
 
-            builder.HasIndex(ct => ct.Code).IsUnique();
+            builder.HasIndex(c => c.Code).IsUnique();
 
             builder
-                .HasOne(ct => ct.CourseCategoryType)
-                .WithMany(ctt => ctt.Courses)
-                .HasForeignKey(ct => ct.CategoryTypeId);
+                .HasOne(c => c.CourseCategoryType)
+                .WithMany(cct => cct.Courses)
+                .HasForeignKey(c => c.CourseCategoryTypeId);
         }
     }
 }
