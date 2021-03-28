@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{4E143332-6772-4E57-8DC5-5BA036509C7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Global.Rivers", "UoW.Global.Rivers\UoW.Global.Rivers.csproj", "{666DC8E3-F019-42DB-A77F-DD522B084D4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Global.River", "UoW.Global.River\UoW.Global.River.csproj", "{666DC8E3-F019-42DB-A77F-DD522B084D4E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Students.Sand", "UoW.Students.Sand\UoW.Students.Sand.csproj", "{58838625-8C4B-4714-AB80-ED211CA75566}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Faculties.Flowers", "UoW.Faculties.Flowers\UoW.Faculties.Flowers.csproj", "{E6CF6D59-A392-4795-A580-A184BBFBE6E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Faculties.Flower", "UoW.Faculties.Flower\UoW.Faculties.Flower.csproj", "{E6CF6D59-A392-4795-A580-A184BBFBE6E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Books.Snow", "UoW.Books.Snow\UoW.Books.Snow.csproj", "{E2C03C4B-F42F-49E1-8625-B96BF914007E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UoW.Courses.Storm", "UoW.Courses.Storm\UoW.Courses.Storm.csproj", "{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UoW.Courses.Storm", "UoW.Courses.Storm\UoW.Courses.Storm.csproj", "{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UoW.Departments.Hill", "UoW.Departments.Hill\UoW.Departments.Hill.csproj", "{81E5D15C-DDC4-464E-B491-7E732D049F5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E5D15C-DDC4-464E-B491-7E732D049F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E5D15C-DDC4-464E-B491-7E732D049F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E5D15C-DDC4-464E-B491-7E732D049F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E5D15C-DDC4-464E-B491-7E732D049F5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{E6CF6D59-A392-4795-A580-A184BBFBE6E1} = {4E143332-6772-4E57-8DC5-5BA036509C7C}
 		{E2C03C4B-F42F-49E1-8625-B96BF914007E} = {4E143332-6772-4E57-8DC5-5BA036509C7C}
 		{7D1D1F1B-1AFD-4DF6-AFB1-4A4525679249} = {4E143332-6772-4E57-8DC5-5BA036509C7C}
+		{81E5D15C-DDC4-464E-B491-7E732D049F5C} = {4E143332-6772-4E57-8DC5-5BA036509C7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F202F8CF-4468-4ABA-81EE-2811A2E494E9}

@@ -1,6 +1,6 @@
-﻿namespace UoW.Global.Rivers
+﻿namespace UoW.Global.River
 {
-    public class SemesterEntity
+    public class ContactTypeEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

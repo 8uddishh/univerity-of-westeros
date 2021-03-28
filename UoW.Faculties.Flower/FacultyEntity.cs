@@ -1,9 +1,8 @@
-﻿namespace UoW.Database.Robert.Entities
+﻿namespace UoW.Faculties.Flower
 {
     using System;
-    using System.Collections.Generic;
 
-    public class Faculty
+    public class FacultyEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -17,12 +16,5 @@
         public string AboutFaculty { get; set; }
         public int FacultyTypeId { get; set; }
         public int PrimaryDepartmentId { get; set; }
-
-        public FacultyType FacultyType { get; set; }
-        public Department PrimaryDepartment { get; set; }
-
-        public IList<BookLedger> BookLedgers { get; set; }
-        public IList<FacultyCourse> FacultyCourses { get; set; }
-        public IList<FacultyContact> FacultyContacts { get; set; }
     }
 }

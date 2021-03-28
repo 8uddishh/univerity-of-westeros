@@ -1,9 +1,8 @@
-﻿namespace UoW.Database.Robert.Entities
+﻿namespace UoW.Students.Sand
 {
     using System;
-    using System.Collections.Generic;
 
-    public class Student
+    public class StudentEntity
     {
         public int Id { get; set; }
         public string RollNumber { get; set; }
@@ -19,14 +18,5 @@
         public int BatchId { get; set; }
         public int StudentStatusTypeId { get; set; }
         public int CurrentSemesterId { get; set; }
-
-
-        public Department Department { get; set; }
-        public Batch Batch { get; set; }
-        public StudentStatusType StudentStatusType { get; set; }
-        public Semester Semester { get; set; }
-
-        public IList<BookLedger> BookLedgers { get; set; }
-        public IList<StudentCourse> StudentCourses { get; set; }
     }
 }

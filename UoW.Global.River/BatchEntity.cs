@@ -1,4 +1,4 @@
-﻿namespace UoW.Global.Rivers
+﻿namespace UoW.Global.River
 {
     public class BatchEntity
     {

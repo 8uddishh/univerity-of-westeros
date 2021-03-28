@@ -18,6 +18,9 @@
         // Faculties
         public DbSet<FacultyType> FacultyTypes { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
+        public DbSet<FacultyCourse> FacultyCourses { get; set; }
+        public DbSet<FacultyContact> FacultyContacts { get; set; }
+        public DbSet<FacultyAddressContactXref> FacultyAddressContactXrefs { get; set; }
 
         // Books
         public DbSet<Publisher> Publishers { get; set; }
@@ -42,6 +45,7 @@
 
         // Students
         public DbSet<Student> Students { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -54,6 +58,9 @@
             // Faculties
             modelBuilder.Entity<FacultyType>(b => b.Configure());
             modelBuilder.Entity<Faculty>(b => b.Configure());
+            modelBuilder.Entity<FacultyCourse>(b => b.Configure());
+            modelBuilder.Entity<FacultyContact>(b => b.Configure());
+            modelBuilder.Entity<FacultyAddressContactXref>(b => b.Configure());
 
             // Books
             modelBuilder.Entity<Publisher>(b => b.Configure());
@@ -78,6 +85,7 @@
 
             // Students
             modelBuilder.Entity<Student>(b => b.Configure());
+            modelBuilder.Entity<StudentCourse>(b => b.Configure());
         }
     }
 }

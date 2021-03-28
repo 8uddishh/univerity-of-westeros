@@ -9,5 +9,6 @@
         public string Description { get; set; }
 
         public IList<PublisherContact> PublisherContacts { get; set; }
+        public IList<FacultyContact> FacultyContacts { get; set; }
     }
 }

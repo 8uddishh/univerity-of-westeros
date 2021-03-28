@@ -1,6 +1,6 @@
-﻿namespace UoW.Faculties.Flowers
+﻿namespace UoW.Books.Snow
 {
-    public class FacultyType
+    public class BookStatusTypeEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

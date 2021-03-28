@@ -1,6 +1,6 @@
-﻿namespace UoW.Global.Rivers
+﻿namespace UoW.Faculties.Flower
 {
-    public class ContactTypeEntity
+    public class FacultyTypeEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

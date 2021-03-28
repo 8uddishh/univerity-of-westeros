@@ -11,5 +11,7 @@
 
         public CourseCategoryType CourseCategoryType { get; set; }
         public IList<CourseSyllabus> CourseSyllabi { get; set; }
+        public IList<StudentCourse> StudentCourses { get; set; }
+        public IList<FacultyCourse> FacultyCourses { get; set; }
     }
 }
