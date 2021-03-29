@@ -13,5 +13,6 @@
         public IList<CourseSyllabus> CourseSyllabi { get; set; }
         public IList<StudentCourse> StudentCourses { get; set; }
         public IList<FacultyCourse> FacultyCourses { get; set; }
+        public IList<DepartmentCourse> DepartmentCourses { get; set; }
     }
 }

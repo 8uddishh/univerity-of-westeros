@@ -11,7 +11,9 @@
         public string WebsiteUrl { get; set; }
         public string AboutDepartment { get; set; }
 
-        public IList<Faculty> Faculties { get; set; }
+        public IList<Faculty> PrimaryFaculties { get; set; }
         public IList<Student> Students { get; set; }
+        public IList<DepartmentFaculty> DepartmentFaculties { get; set; }
+        public IList<DepartmentCourse> DepartmentCourses { get; set; }
     }
 }

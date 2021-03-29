@@ -25,13 +25,19 @@
             builder.HasIndex(cs => new
             {
                 cs.Title,
-                cs.CourseId 
+                cs.CourseId,
+                cs.CourseModuleTypeId 
             }).IsUnique();
 
             builder
                 .HasOne(cs => cs.Course)
                 .WithMany(c => c.CourseSyllabi)
                 .HasForeignKey(cs => cs.CourseId);
+
+            builder
+                .HasOne(cs => cs.CourseModuleType)
+                .WithMany(cmt => cmt.CourseSyllabi)
+                .HasForeignKey(cs => cs.CourseModuleTypeId);
         }
     }
 }

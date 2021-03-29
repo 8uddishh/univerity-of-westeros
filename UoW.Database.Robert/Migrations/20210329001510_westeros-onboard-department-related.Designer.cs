@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UoW.Database.Robert;
 
 namespace UoW.Database.Robert.Migrations
 {
     [DbContext(typeof(WesterosContext))]
-    partial class WesterosContextModelSnapshot : ModelSnapshot
+    [Migration("20210329001510_westeros-onboard-department-related")]
+    partial class westerosonboarddepartmentrelated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1084,7 +1086,7 @@ namespace UoW.Database.Robert.Migrations
                     b.HasOne("UoW.Database.Robert.Entities.Faculty", "Faculty")
                         .WithMany("DepartmentFaculties")
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 

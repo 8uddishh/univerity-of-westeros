@@ -9,5 +9,6 @@
         public string Description { get; set; }
 
         public IList<Student> Students { get; set; }
+        public IList<DepartmentCourse> DepartmentCourses { get; set; }
     }
 }

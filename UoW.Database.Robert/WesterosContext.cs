@@ -9,11 +9,10 @@
         public WesterosContext(DbContextOptions<WesterosContext> options) : base(options)
         { }
 
+        // Global
         public DbSet<ContactType> ContactTypes { get; set; }
         public DbSet<Semester> Semesters { get; set; }
         public DbSet<Batch> Batches { get; set; }
-        
-        public DbSet<StudentStatusType> StudentStatusTypes { get; set; }
 
         // Faculties
         public DbSet<FacultyType> FacultyTypes { get; set; }
@@ -42,19 +41,23 @@
 
         // Departments
         public DbSet<Department> Departments { get; set; }
+        public DbSet<DepartmentFaculty> DepartmentFaculties { get; set; }
+        public DbSet<DepartmentCourse> DepartmentCourses { get; set; }
 
         // Students
         public DbSet<Student> Students { get; set; }
+        public DbSet<StudentStatusType> StudentStatusTypes { get; set; }
         public DbSet<StudentCourse> StudentCourses { get; set; }
+        public DbSet<DepartmentCourseModule> DepartmentCourseModules { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Global
             modelBuilder.Entity<ContactType>(b => b.Configure());
             modelBuilder.Entity<Semester>(b => b.Configure());
             modelBuilder.Entity<Batch>(b => b.Configure());
-            modelBuilder.Entity<StudentStatusType>(b => b.Configure());
-
+            
             // Faculties
             modelBuilder.Entity<FacultyType>(b => b.Configure());
             modelBuilder.Entity<Faculty>(b => b.Configure());
@@ -82,9 +85,13 @@
 
             // Departments
             modelBuilder.Entity<Department>(b => b.Configure());
+            modelBuilder.Entity<DepartmentFaculty>(b => b.Configure());
+            modelBuilder.Entity<DepartmentCourse>(b => b.Configure());
+            modelBuilder.Entity<DepartmentCourseModule>(b => b.Configure());
 
             // Students
             modelBuilder.Entity<Student>(b => b.Configure());
+            modelBuilder.Entity<StudentStatusType>(b => b.Configure());
             modelBuilder.Entity<StudentCourse>(b => b.Configure());
         }
     }

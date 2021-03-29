@@ -58,7 +58,7 @@
 
             builder
                 .HasOne(f => f.PrimaryDepartment)
-                .WithMany(d => d.Faculties)
+                .WithMany(d => d.PrimaryFaculties)
                 .HasForeignKey(f => f.PrimaryDepartmentId);
         }
     }

@@ -24,5 +24,6 @@
         public IList<BookLedger> BookLedgers { get; set; }
         public IList<FacultyCourse> FacultyCourses { get; set; }
         public IList<FacultyContact> FacultyContacts { get; set; }
+        public IList<DepartmentFaculty> DepartmentFaculties { get; set; }
     }
 }
