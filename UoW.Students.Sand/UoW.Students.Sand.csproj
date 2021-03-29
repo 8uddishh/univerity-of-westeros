@@ -6,6 +6,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.0.0</Version>
     <Description>Student entities for the University of Westeros</Description>
+    <Authors>UoW</Authors>
+    <Product>UoW Student Entities</Product>
   </PropertyGroup>
 
 </Project>
