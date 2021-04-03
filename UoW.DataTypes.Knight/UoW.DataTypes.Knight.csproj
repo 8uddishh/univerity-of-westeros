@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Description>Primitive data types helper functionalties.</Description>
+    <Authors>UoW</Authors>
+    <Product>UoW primitive data types helpers</Product>
+  </PropertyGroup>
+
+</Project>
