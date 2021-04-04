@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UoW.OdataEntitySpecs.Maester": {
+      "commandName": "Project",
+      "commandLineArgs": "generate-for -a \"C:\\Learning\\University of Westeros\\UoW.Students.Martell\\bin\\Release\\netcoreapp3.1\\UoW.Students.Martell.dll\" -p UoW.Students.Martell"
+    }
+  }
+}

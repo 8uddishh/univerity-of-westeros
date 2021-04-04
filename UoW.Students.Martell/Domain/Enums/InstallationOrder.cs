@@ -10,6 +10,6 @@
         HealthCheck,
         Mediator,
         Mvc,
-        Swagger
+        // Swagger
     }
 }

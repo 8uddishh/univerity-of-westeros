@@ -7,6 +7,6 @@
     public interface IServiceInstaller
     {
         InstallationOrder Order { get; }
-        void Install(IServiceCollection services, IConfiguration config, string env);
+        void Install(IServiceCollection services, IConfiguration configuration, string environment);
     }
 }

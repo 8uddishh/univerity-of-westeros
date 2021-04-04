@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using UoW.Students.Martell.Domains.Entities;
+    using UoW.Students.Martell.Domain.Entities;
 
     public static class StudentStatusTypeSpecifications
     {

@@ -1,4 +1,4 @@
-﻿namespace UoW.Students.Martell.Domains.Entities
+﻿namespace UoW.Students.Martell.Domain.Entities
 {
     using System.Collections.Generic;
     using UoW.Courses.Storm;

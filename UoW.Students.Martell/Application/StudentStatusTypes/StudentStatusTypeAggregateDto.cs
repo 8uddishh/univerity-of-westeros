@@ -4,7 +4,7 @@
     using UoW.OData.Knight.Attributes;
 
     [ODataEntityMapper("StudentStatusType")]
-    public class StudentStatusTypeAggregateDto
+    public class StudentStatusTypeAggregateDto : StudentStatusTypeDto
     {
         public IList<StudentDto> Students { get; set; }
     }

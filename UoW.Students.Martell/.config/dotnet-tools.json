@@ -7,6 +7,12 @@
       "commands": [
         "dotnet-mapster"
       ]
+    },
+    "uow.odataentityspecs.maester": {
+      "version": "1.0.5",
+      "commands": [
+        "odata-entity-filter-generator"
+      ]
     }
   }
 }

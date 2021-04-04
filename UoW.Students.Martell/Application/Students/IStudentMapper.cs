@@ -1,7 +1,7 @@
 ﻿namespace UoW.Students.Martell.Application.Students
 {
     using Mapster;
-    using UoW.Students.Martell.Domains.Entities;
+    using UoW.Students.Martell.Domain.Entities;
 
     [Mapper]
     public interface IStudentMapper

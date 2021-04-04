@@ -4,7 +4,7 @@
     using Microsoft.EntityFrameworkCore.Infrastructure;
     using System;
     using System.Threading.Tasks;
-    using UoW.Students.Martell.Domains.Entities;
+    using UoW.Students.Martell.Domain.Entities;
 
     public interface IWesterosStudentDbContext : IDisposable
     {

@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UoW.DataTypes.Knight", "UoW
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Toolkits", "Toolkits", "{E9A427AB-0484-41C2-A81C-8957CA481CC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UoW.OdataEntitySpecs.Maester", "UoW.OdataEntitySpecs.Maester\UoW.OdataEntitySpecs.Maester.csproj", "{5B20234C-C005-4872-990C-04A17C7763B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{ADED5B41-9C53-4640-93A5-DFB87EE75EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADED5B41-9C53-4640-93A5-DFB87EE75EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADED5B41-9C53-4640-93A5-DFB87EE75EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B20234C-C005-4872-990C-04A17C7763B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B20234C-C005-4872-990C-04A17C7763B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B20234C-C005-4872-990C-04A17C7763B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B20234C-C005-4872-990C-04A17C7763B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{928F8FD7-02DA-4930-854B-151D3015573D} = {9BB86358-6940-4F3D-B21F-AA0F3FE6BD3A}
 		{FA369AFA-17B3-417F-B29A-6091C926883A} = {A958674E-FFDB-4636-B689-DFB2E2839566}
 		{ADED5B41-9C53-4640-93A5-DFB87EE75EA6} = {9BB86358-6940-4F3D-B21F-AA0F3FE6BD3A}
+		{5B20234C-C005-4872-990C-04A17C7763B4} = {E9A427AB-0484-41C2-A81C-8957CA481CC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F202F8CF-4468-4ABA-81EE-2811A2E494E9}

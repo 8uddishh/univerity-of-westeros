@@ -1,4 +1,4 @@
-﻿namespace UoW.Students.Martell.Domains.Entities
+﻿namespace UoW.Students.Martell.Domain.Entities
 {
     using UoW.Students.Sand;
 

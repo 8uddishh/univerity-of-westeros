@@ -11,10 +11,14 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.13" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="3.1.13" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.13" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.1" />
     <PackageReference Include="UoW.Courses.Storm" Version="1.0.0" />
-    <PackageReference Include="UoW.DataTypes.Knight" Version="1.0.0" />
+    <PackageReference Include="UoW.DataTypes.Knight" Version="1.0.1" />
     <PackageReference Include="UoW.OData.Knight" Version="1.0.0" />
     <PackageReference Include="UoW.Students.Sand" Version="1.0.0" />
   </ItemGroup>
@@ -23,10 +27,18 @@
     <Generated Include="**\*.g.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Application\Courses\Specifications\" />
+    <Folder Include="Application\StudentCourses\Specifications\" />
+    <Folder Include="Application\StudentStatusTypes\Specifications\" />
+    <Folder Include="Application\Students\Specifications\" />
+    <Folder Include="Web\Controllers\" />
+  </ItemGroup>
+
   <Target Name="Mapster" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tool restore" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n UoW.Students.Martell.Infrastructure.Mappers -o Infrastructure/Mappers" />
-    <!--<Exec WorkingDirectory="$(ProjectDir)" Command="dotnet odata-group-api-generator generate-for -a &quot;$(TargetDir)$(ProjectName).dll&quot; -p ReviewsGroup" />-->
+    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet odata-entity-filter-generator generate-for -a &quot;$(TargetDir)$(ProjectName).dll&quot; -p &quot;$(ProjectName)&quot;" />
   </Target>
 
   <Target Name="CleanGenerated">
