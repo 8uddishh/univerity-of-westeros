@@ -27,18 +27,10 @@
     <Generated Include="**\*.g.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Courses\Specifications\" />
-    <Folder Include="Application\StudentCourses\Specifications\" />
-    <Folder Include="Application\StudentStatusTypes\Specifications\" />
-    <Folder Include="Application\Students\Specifications\" />
-    <Folder Include="Web\Controllers\" />
-  </ItemGroup>
-
   <Target Name="Mapster" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tool restore" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n UoW.Students.Martell.Infrastructure.Mappers -o Infrastructure/Mappers" />
-    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet odata-entity-filter-generator generate-for -a &quot;$(TargetDir)$(ProjectName).dll&quot; -p &quot;$(ProjectName)&quot;" />
+    <!--<Exec WorkingDirectory="$(ProjectDir)" Command="dotnet odata-entity-filter-generator generate-for -a &quot;$(TargetDir)$(ProjectName).dll&quot; -p &quot;$(ProjectName)&quot;" />-->
   </Target>
 
   <Target Name="CleanGenerated">
