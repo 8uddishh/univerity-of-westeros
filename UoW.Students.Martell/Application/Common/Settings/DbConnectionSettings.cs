@@ -4,7 +4,6 @@
 
     public class DbConnectionSettings
     {
-        [JsonPropertyName("Westros-Robert")]
-        public string Westeros { get; set; }
+        public string WestrosRobert { get; set; }
     }
 }

@@ -5,7 +5,6 @@
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
     using UoW.Students.Martell.Application.StudentStatusTypes;
@@ -13,11 +12,11 @@
     using UoW.Students.Martell.Web.Specifications;
 
     [Route("odata/aggregates/student-status-types")]
-    public class StudentStatusTypeController : ControllerBase
+    public class StudentStatusTypeAggregateController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public StudentStatusTypeController(IMediator mediator)
+        public StudentStatusTypeAggregateController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }

@@ -16,7 +16,7 @@
                 var options = c.Resolve<IOptions<DbConnectionSettings>>();
                 var dbConnectionSettings = options.Value;
                 var dbContextOptionsBuilder = new DbContextOptionsBuilder<WesterosStudentDbContext>()
-                    .UseSqlServer(dbConnectionSettings.Westeros, opt =>
+                    .UseSqlServer(dbConnectionSettings.WestrosRobert, opt =>
                     {
                         opt.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds);
                         opt.EnableRetryOnFailure(10);

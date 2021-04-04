@@ -11,8 +11,6 @@
   "profiles": {
     "UoW.Students.Martell-Dev": {
       "commandName": "Project",
-      "launchBrowser": true,
-      //"launchUrl": "weatherforecast",
       "applicationUrl": "https://localhost:44369;http://localhost:53009",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

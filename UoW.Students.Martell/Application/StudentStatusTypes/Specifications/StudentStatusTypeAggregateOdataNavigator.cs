@@ -6,13 +6,14 @@
     using System.Linq;
     using UoW.OData.Knight;
     using UoW.OData.Knight.Brokers;
+    using UoW.Students.Martell.Application.Students;
     using UoW.Students.Martell.Domain.Entities;
 
     public class StudentStatusTypeAggregateOdataNavigator : OdataNavigator<StudentStatusTypeAggregateDto, StudentStatusType>
     {
-        private readonly IOdataFilterMapper<StudentDto, Student> _studentFilterMapper;
+        private readonly IOdataFilterMapper<StudentAggregateDto, Student> _studentFilterMapper;
 
-        public StudentStatusTypeAggregateOdataNavigator(IOdataFilterMapper<StudentDto, Student> studentFilterMapper)
+        public StudentStatusTypeAggregateOdataNavigator(IOdataFilterMapper<StudentAggregateDto, Student> studentFilterMapper)
         {
             _studentFilterMapper = studentFilterMapper ?? throw new ArgumentNullException(nameof(studentFilterMapper));
         }

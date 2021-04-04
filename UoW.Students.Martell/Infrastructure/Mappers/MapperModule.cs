@@ -24,6 +24,9 @@
             builder.RegisterType<StudentStatusTypeMapper>().As<IStudentStatusTypeMapper>()
                 .SingleInstance();
 
+            builder.RegisterType<DtoProfileRegister>().Named<IMapperRegister>("dto")
+                .SingleInstance();
+
             builder.Register(ctx =>
             {
                 var config = new TypeAdapterConfig();

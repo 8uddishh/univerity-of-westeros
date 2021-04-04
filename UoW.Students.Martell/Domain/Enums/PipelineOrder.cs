@@ -8,6 +8,6 @@
         Cors,
         Authorization,
         Exception,
-        Mvc
+        MvcOdata
     }
 }

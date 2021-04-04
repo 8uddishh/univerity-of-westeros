@@ -12,11 +12,11 @@
     using UoW.Students.Martell.Web.Specifications;
 
     [Route("odata/aggregates/courses")]
-    public class CourseController : ControllerBase
+    public class CourseAggregateController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public CourseController(IMediator mediator)
+        public CourseAggregateController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }

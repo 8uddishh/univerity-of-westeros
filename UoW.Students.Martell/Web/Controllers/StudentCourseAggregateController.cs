@@ -7,16 +7,16 @@
     using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
-    using UoW.Students.Martell.Application.Students;
-    using UoW.Students.Martell.Application.Students.Queries;
+    using UoW.Students.Martell.Application.StudentCourses;
+    using UoW.Students.Martell.Application.StudentCourses.Queries;
     using UoW.Students.Martell.Web.Specifications;
 
-    [Route("odata/aggregates/students")]
-    public class StudentController : ControllerBase
+    [Route("odata/aggregates/student-courses")]
+    public class StudentCourseAggregateController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public StudentController(IMediator mediator)
+        public StudentCourseAggregateController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
@@ -24,25 +24,25 @@
         [HttpGet]
         [Route("")]
         [RestrictedEnableQuery()]
-        public async Task<IEnumerable<StudentAggregateDto>> SearchCoursesAsync(ODataQueryOptions<StudentAggregateDto> queryOptions,
+        public async Task<IEnumerable<StudentCourseAggregateDto>> SearchCoursesAsync(ODataQueryOptions<StudentCourseAggregateDto> queryOptions,
             CancellationToken cancellationToken = default)
         {
-            return await _mediator.Send(new SearchStudentsQuery
+            return await _mediator.Send(new SearchStudentCoursesQuery
             {
                 QueryOptions = queryOptions
             }, cancellationToken).ConfigureAwait(false);
         }
 
         [HttpGet]
-        [Route("{student_id}")]
+        [Route("{student_course_id}")]
         [RestrictedEnableQuery()]
-        public async Task<StudentAggregateDto> GetCourseAsync([FromRoute(Name = "student_id")] int studentId,
-            ODataQueryOptions<StudentAggregateDto> queryOptions, CancellationToken cancellationToken = default)
+        public async Task<StudentCourseAggregateDto> GetCourseAsync([FromRoute(Name = "student_course_id")] int studentCourseId,
+            ODataQueryOptions<StudentCourseAggregateDto> queryOptions, CancellationToken cancellationToken = default)
         {
-            return await _mediator.Send(new GetStudentQuery
+            return await _mediator.Send(new GetStudentCourseQuery
             {
                 QueryOptions = queryOptions,
-                StudentId = studentId
+                StudentCourseId = studentCourseId
             }, cancellationToken).ConfigureAwait(false);
         }
     }

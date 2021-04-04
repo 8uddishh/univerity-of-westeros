@@ -1,6 +1,7 @@
 ﻿namespace UoW.Students.Martell.Web.Installers
 {
     using FluentValidation.AspNetCore;
+    using Microsoft.AspNet.OData.Extensions;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using System.Diagnostics.CodeAnalysis;
@@ -13,6 +14,7 @@
         public InstallationOrder Order => InstallationOrder.Mvc;
         public void Install(IServiceCollection services, IConfiguration configuration, string environment)
         {
+            services.AddOData();
             services.AddControllers()
                 .AddFluentValidation(cfg =>
                 {
