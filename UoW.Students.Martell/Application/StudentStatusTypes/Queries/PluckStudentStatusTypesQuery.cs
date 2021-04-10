@@ -2,10 +2,10 @@
 {
     using MediatR;
     using Microsoft.AspNet.OData.Query;
+    using System.Collections.Generic;
 
-    public class GetStudentStatusTypeQuery : IRequest<StudentStatusTypeAggregateDto>
+    public class PluckStudentStatusTypesQuery : IRequest<IEnumerable<StudentStatusTypeAggregateDto>>
     {
-        public int StudentStatusTypeId { get; set; }
         public ODataQueryOptions<StudentStatusTypeAggregateDto> QueryOptions { get; set; }
     }
 }

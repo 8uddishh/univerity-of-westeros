@@ -12,8 +12,8 @@
     using UoW.Students.Martell.Application.Common.Brokers;
     using UoW.Students.Martell.Domain.Entities;
 
-    public class StudentStatusTypeQueryHandler : IRequestHandler<SearchStudentStatusTypesQuery, IEnumerable<StudentStatusTypeAggregateDto>>,
-        IRequestHandler<GetStudentStatusTypeQuery, StudentStatusTypeAggregateDto>,
+    public class StudentStatusTypeQueryHandler : IRequestHandler<PluckStudentStatusTypesQuery, IEnumerable<StudentStatusTypeAggregateDto>>,
+        IRequestHandler<PickStudentStatusTypeQuery, StudentStatusTypeAggregateDto>,
         IRequestHandler<CountStudentStatusTypesQuery, long>
     {
         private readonly IOdataFilterMapper<StudentStatusTypeAggregateDto, StudentStatusType> _filterMapper;
@@ -31,7 +31,7 @@
             _westerosStudentDbContextFactory = westerosStudentDbContextFactory ?? throw new ArgumentNullException(nameof(westerosStudentDbContextFactory));
         }
 
-        public async Task<IEnumerable<StudentStatusTypeAggregateDto>> Handle(SearchStudentStatusTypesQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<StudentStatusTypeAggregateDto>> Handle(PluckStudentStatusTypesQuery request, CancellationToken cancellationToken)
         {
             var filter = request.QueryOptions.Filter != null ? _filterMapper.MapAsSearchExpression(request.QueryOptions) : default;
             using var dbContext = _westerosStudentDbContextFactory.SpawnStudentDbContext();
@@ -50,7 +50,7 @@
             return _mapper.Map<IEnumerable<StudentStatusTypeAggregateDto>>(studentStatusTypes);
         }
 
-        public async Task<StudentStatusTypeAggregateDto> Handle(GetStudentStatusTypeQuery request, CancellationToken cancellationToken)
+        public async Task<StudentStatusTypeAggregateDto> Handle(PickStudentStatusTypeQuery request, CancellationToken cancellationToken)
         {
             using var dbContext = _westerosStudentDbContextFactory.SpawnStudentDbContext();
             var queryable = dbContext.StudentStatusTypes.AsQueryable();

@@ -16,8 +16,27 @@ services:
       - sql-data:/var/opt/sqlserver/data
       - sql-log:/var/opt/sqlserver/log
       - sql-backup:/var/opt/sqlserver/backup
+  martell-neo4j-server:
+    image: neo4j:4.2.5
+    environment:
+      NEO4J_AUTH: neo4j/dorne
+    ports:
+      - "15790:7474"
+      - "25790:7473"
+      - "35790:7687"
+    volumes:
+      - martell-conf:/conf
+      - martell-data:/data
+      - martell-import:/import
+      - martell-logs:/logs
+      - martell-plugins:/plugins
 volumes:
   sql-system:
   sql-data:
   sql-log:
   sql-backup:
+  martell-conf:
+  martell-data:
+  martell-import:
+  martell-logs:
+  martell-plugins:

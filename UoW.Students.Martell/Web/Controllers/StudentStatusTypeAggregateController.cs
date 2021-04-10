@@ -27,7 +27,7 @@
         public async Task<IEnumerable<StudentStatusTypeAggregateDto>> SearchCoursesAsync(ODataQueryOptions<StudentStatusTypeAggregateDto> queryOptions,
             CancellationToken cancellationToken = default)
         {
-            return await _mediator.Send(new SearchStudentStatusTypesQuery
+            return await _mediator.Send(new PluckStudentStatusTypesQuery
             {
                 QueryOptions = queryOptions
             }, cancellationToken).ConfigureAwait(false);
@@ -39,7 +39,7 @@
         public async Task<StudentStatusTypeAggregateDto> GetCourseAsync([FromRoute(Name = "student_status_type_id")] int studentStatusId,
             ODataQueryOptions<StudentStatusTypeAggregateDto> queryOptions, CancellationToken cancellationToken = default)
         {
-            return await _mediator.Send(new GetStudentStatusTypeQuery
+            return await _mediator.Send(new PickStudentStatusTypeQuery
             {
                 QueryOptions = queryOptions,
                 StudentStatusTypeId = studentStatusId

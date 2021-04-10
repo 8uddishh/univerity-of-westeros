@@ -27,6 +27,10 @@
     <Generated Include="**\*.g.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Application\StudentStatusTypes\Commands\" />
+  </ItemGroup>
+
   <Target Name="Mapster" AfterTargets="AfterBuild">
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tool restore" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n UoW.Students.Martell.Infrastructure.Mappers -o Infrastructure/Mappers" />
